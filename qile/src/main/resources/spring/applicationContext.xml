@@ -1,0 +1,52 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	
+	<!-- 1.加载jdbc.properties文件的位置 -->
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+	
+	<!-- 2.配置druid连接池 ，id是固定值，class是druid连接池类的全路径 -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+		<!-- 配置连接数据库的基本信息 -->
+		<property name="driverClassName" value="${db.driverClassName}"></property>
+		<property name="url" value="${db.url}"></property>
+		<property name="username" value="${db.username}"></property>
+		<property name="password" value="${db.password}"></property>
+	</bean>
+	
+	<!-- 3.整合spring和mybatis框架	
+		将SqlSession等对象的创建交给Spring容器
+		id值(sqlSessionFactory)是固定值
+	 -->
+	<bean id="sqlSessionFactory" 
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- 1.指定mybatis核心配置文件的位置 -->
+		<property name="configLocation" 
+				value="classpath:mybatis/mybatis-config.xml"></property>
+		<!-- 2.配置连接池(数据源) ref指向连接池bean对象的id值 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 3、扫描所有的 XxxMapper.xml映射文件，读取其中配置的SQL语句 -->
+		<property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"/>
+	</bean>
+	
+	<!-- 5、定义mapper接口扫描器 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 扫描所有XxxMapper接口，将接口实例的创建交给spring容器 -->
+		<property name="basePackage" 
+			value="com.it.mapper"/>
+	</bean>
+	
+	<!-- 6.配置需要扫描的包(service层)：spring自动去扫描 base-package下的类，
+		如果扫描到的类上有 @Controller、@Service、@Component等注解，
+		将会自动将类注册为bean（即由spring创建实例）
+	 -->
+	<context:component-scan 
+		base-package="com.it.service">
+	</context:component-scan>
+
+</beans>

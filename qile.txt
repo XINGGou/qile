@@ -1,0 +1,49 @@
+-- --------------------------------------------
+-- 创建qiledb库、tb_door、tb_order表并插入记录
+-- --------------------------------------------
+-- set names gbk; ##设置编码
+-- 删除qiledb库(如果存在)
+-- drop database if exists qiledb;
+-- 重新创建qiledb库
+create database if not exists qiledb charset utf8;
+-- 选择qiledb库
+use qiledb;
+-- 删除门店表(需要先删除订单表)
+drop table if exists tb_door;
+-- 创建门店表
+create table tb_door(
+	id int primary key auto_increment,	-- 门店id
+	name varchar(100),					-- 门店名称
+	tel varchar(100),					-- 联系电话
+	addr varchar(255)					-- 门店地址
+);
+-- 往门店表中插入记录
+insert into tb_door values ('1', '其乐蛋糕店(春熙路)', '010-62112313', '成都市锦江区春熙路北段');
+insert into tb_door values ('2', '其乐蛋糕店(天府三街)', '010-82356537', '成都市天府三街升华路');
+insert into tb_door values ('3', '其乐蛋糕店(孵化园)', '010-84477746', '孵化园奥克斯广场二层');
+insert into tb_door values ('4', '其乐蛋糕店(成都东站)', '010-65286602', '四川省成都市成华区邛崃山路');
+insert into tb_door values ('5', '其乐蛋糕店(四川传媒学院)', '010-62152539', '学院大门对面');
+
+-- 删除订单表(如果存在)
+drop table if exists tb_order;
+-- 创建订单表
+create table tb_order(
+	id int(11) primary key AUTO_INCREMENT,		-- 订单id
+	door_id int(11),							-- 门店id
+	order_no varchar(50),						-- 订单编号
+	order_type varchar(50),						-- 订单类型(巧克力蛋糕/奶茶/咖啡..)
+	pnum tinyint(4),							-- 用餐人数
+	cashier varchar(50),						-- 收银员
+	order_time timestamp NOT NULL DEFAULT '0000-00-00 00:00:00', -- 下单时间
+	pay_time timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',	 -- 支付时间
+	pay_type varchar(50),						-- 支付类型(微信支付/支付宝支付)
+	price double(8,2),							-- 支付金额
+	foreign key(door_id) REFERENCES tb_door(id)	-- 关联外键
+);
+-- 往订单表中插入记录
+INSERT INTO tb_order VALUES ('1', '1', 'P001', '巧克力奶茶', '1', '张三', '2021-02-26 14:49:07', '2021-02-26 14:50:38', '微支付', '16.00');
+INSERT INTO tb_order VALUES ('2', '1', 'P003', '芙蓉蛋糕', '3', '李四', '2021-03-27 13:34:07', '2021-03-27 13:34:38', '微支付', '20.00');
+INSERT INTO tb_order VALUES ('3', '1', 'P005', '黑咖啡', '1', '王二', '2020-09-22 11:59:22', '2020-09-22 11:59:22', '支付宝支付', '28.00');
+INSERT INTO tb_order VALUES ('4', '1', 'P007', '布丁', '1', '麻子', '2021-02-23 13:01:26', '2021-02-23 13:01:26', '支付宝支付', '49.00');
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    
+<!-- MyBatis的全局配置文件 -->
+<configuration >
+	<!-- 1.配置开发环境，标签内可以配置多个环境，比如develop，test等 -->
+	<!-- 1.1.配置事务管理方式：JDBC：将事务交给JDBC管理（推荐） -->
+	<!-- 1.2.配置数据源，即连接池方式:JNDI/POOLED/UNPOOLED -->
+	<!-- 2.加载Mapper配置文件,路径以斜杠间隔: xx/xx/../xx.xml -->
+	
+	<!-- 以上配置, 与Spring整合后, 都由spring管理 -->
+	
+</configuration>
