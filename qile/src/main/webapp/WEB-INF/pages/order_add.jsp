@@ -47,7 +47,7 @@
 				<td>订单类型</td>
 				<td>
 					<input type="text" name="orderType" 
-							value="堂食"/>
+							value="蛋糕"/>
 				</td>
 			</tr>
 			<tr>
