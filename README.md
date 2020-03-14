@@ -24,10 +24,10 @@
 
 **报404错误**
 
-![订单](https://github.com/XINGGou/qile/blob/master/image/404.png)
+![404](https://github.com/XINGGou/qile/blob/master/image/404.png)
 
 **报500异常**
 
-![订单](https://github.com/XINGGou/qile/blob/master/image/500.png)
+![500](https://github.com/XINGGou/qile/blob/master/image/500.png)
 
 **虽说比较简单，不过适用于初学者对springmvc框架的掌握**
