@@ -1,8 +1,17 @@
 ## 其乐蛋糕店后台管理系统
-**技术：**  
+##### 技术：
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**后端运用：spring+springmvc+mybatis（经典的ssm框架）**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**前端运用：jsp/js**    
-**博客地址**：https://my.oschina.net/u/4115134  
+##### 博客地址：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://my.oschina.net/u/4115134    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://blog.csdn.net/XING_Gou
+
+## 项目目录
+##### 项目简介(一)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [https://blog.csdn.net/XING_Gou/article/details/104859777](https://blog.csdn.net/XING_Gou/article/details/104859777)
+##### 简单教会你如何配置环境(二)：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://blog.csdn.net/XING_Gou/article/details/104864181](https://blog.csdn.net/XING_Gou/article/details/104864181)
+ 
 
 ### 它主要分为三个模块
 ### 1 主页页面
