@@ -16,18 +16,19 @@
 		<error-code>404</error-code>
 		<location>/404.jsp</location>
 	</error-page>
-<!--     配置首页访问
+	
+   <!-- 配置首页访问 -->
 	<welcome-file-list>
 		<welcome-file>/WEB-INF/pages/index.jsp</welcome-file>
-	</welcome-file-list> -->
+	</welcome-file-list>
 
-   <welcome-file-list>
+   <!-- <welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
 		<welcome-file>index</welcome-file>
 	</welcome-file-list>
-
+ -->
 	<!-- 配置springmvc, 将所有请求交给springmvc来处理 -->
 	<servlet>
 		<servlet-name>springmvc</servlet-name>
