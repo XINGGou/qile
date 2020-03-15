@@ -55,10 +55,10 @@
 	window.onload = function(){
 		var a = document.getElementById("index");
 		a.onclick=function(){
-			window.location.href="http://localhost/yonghe-ssm/index";
+			window.location.href="http://localhost/qile/index";
 			/* 防止页面嵌套 */
 		    if (window.top != window.self) {
-		    	top.location.href = "http://localhost/yonghe-ssm/index";
+		    	top.location.href = "http://localhost/qile/index";
 		    }
 		};
 	}
