@@ -6,11 +6,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://my.oschina.net/u/4115134    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://blog.csdn.net/XING_Gou
 
-## 项目目录
-##### 项目简介(一)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [https://blog.csdn.net/XING_Gou/article/details/104859777](https://blog.csdn.net/XING_Gou/article/details/104859777)
-##### 简单教会你如何配置环境(二)：
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://blog.csdn.net/XING_Gou/article/details/104864181](https://blog.csdn.net/XING_Gou/article/details/104864181)
+## 项目目录  
+
+| 其乐蛋糕店后台管理系统  | 地址  |
+| ------------ | ------------ |
+|  其乐后台管理系统(一)--项目介绍 | https://my.oschina.net/u/4115134/blog/3193902  |
+| 其乐后台管理系统(二)--整合三大框架(spring+springmvc+mybatis)  |  https://my.oschina.net/u/4115134/blog/3195801 |
+| 其乐后台管理系统(三)--整合mybatis框架(三大框架搭建成功)  |  https://my.oschina.net/u/4115134/blog/3196768 |
+| 其乐后台管理系统(四)--门店管理模块  | https://my.oschina.net/u/4115134/blog/3207632  |
+
  
 
 ### 它主要分为三个模块
